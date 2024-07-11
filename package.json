@@ -1,0 +1,27 @@
+{
+  "name": "prova",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsup src --out-dir build",
+    "start": "npm run build && node build/index.js",
+    "test": "npm run build && vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
+  "author": "Gialicus",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.4.0",
+    "tsup": "^7.1.0",
+    "tsx": "^3.12.7",
+    "typescript": "^5.1.6",
+    "vite-tsconfig-paths": "^4.2.0",
+    "vitest": "^0.32.4"
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.7.0",
+    "undici": "^6.19.2"
+  }
+}

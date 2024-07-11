@@ -1,12 +1,22 @@
 import { extractWords, repeatedWords, wordsCount } from "./words";
 
 describe("Words Spec", () => {
-  const text = "<div> ciaone a1a23!| 1a|1a";
+  const text = "<div> ciaone a1a23!| 1a|1a|1a|1a|1a|1a|1a|1a|1a|1a|1a|1a|";
   it("extractWords", () => {
     expect(extractWords(text)).toMatchObject([
       "div",
       "ciaone",
       "a1a23",
+      "1a",
+      "1a",
+      "1a",
+      "1a",
+      "1a",
+      "1a",
+      "1a",
+      "1a",
+      "1a",
+      "1a",
       "1a",
       "1a",
     ]);
@@ -17,12 +27,12 @@ describe("Words Spec", () => {
       div: 1,
       ciaone: 1,
       a1a23: 1,
-      "1a": 2,
+      "1a": 12,
     });
   });
   it("repeatedWords", () => {
     const words = extractWords(text);
     const count = wordsCount(words!);
-    expect(repeatedWords(count)).toMatchObject([["1a", 2]]);
+    expect(repeatedWords(count)).toMatchObject([["1a", 12]]);
   });
 });

@@ -15,6 +15,6 @@ export const wordsCount = (words: RegExpMatchArray): Record<string, number> => {
 
 export const repeatedWords = (wordCount: Record<string, number>) => {
   return Object.entries(wordCount)
-    .filter(([_, count]) => count > 1)
+    .filter(([_, count]) => count > 10)
     .map(([word, count]) => [word, count]);
 };

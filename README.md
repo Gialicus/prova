@@ -7,9 +7,9 @@ npm install
 ```
 
 ```
-npm test
+npm run test
 ```
 
 ```
-npm start
+npm run start
 ```
